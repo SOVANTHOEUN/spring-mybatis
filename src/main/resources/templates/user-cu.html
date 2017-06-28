@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div layout:fragment="content">
+		<div class="panel panel-default card-view">
+			<h2 th:text="#{create_new_user}"></h2>
+			<form action="USER_CU" method="POST">
+				<div class="form-group">
+					<label for="email" th:text="#{id}"></label> <input type="text"
+						class="form-control" id="Id" placeholder="Enter ID" name="Id">
+				</div>
+				<div class="form-group">
+					<label for="email" th:text="#{user}"></label> <input type="text"
+						class="form-control" id="username" placeholder="Enter username"
+						name="username">
+				</div>
+				<div class="form-group">
+					<label for="email" th:text="#{email}"></label> <input type="email"
+						class="form-control" id="email" placeholder="Enter email"
+						name="email">
+				</div>
+				<div class="form-group">
+					<label for="pwd" th:text="#{password}"></label> <input
+						type="password" class="form-control" id="pwd"
+						placeholder="Enter password" name="pwd">
+				</div>
+
+				<div class="form-group mb-30">
+					<label class="control-label mb-10 text-left" th:text="#{gender}"></label>
+					<div class="radio radio-info">
+						<input type="radio" name="radio" id="radio1" value="option1"
+							checked=""> <label for="radio1" th:text="#{male}">  </label>
+					</div>
+					<div class="radio radio-info">
+						<input type="radio" name="radio" id="radio2" value="option2"
+							checked=""> <label for="radio2" th:text="#{female}">  </label>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="phnb" th:text="#{phone_number}"></label> <input
+						type="text" class="form-control" id="phnb"
+						placeholder="Enter Phone Number" name="phonenumber">
+				</div>
+
+				<div class="form-group">
+					<label for="sts" th:text="#{status}"></label> <input
+						type="text" class="form-control" id="sts"
+						placeholder="Enter Status" name="status">
+				</div>
+				<div class="checkbox">
+					<label><input type="checkbox" name="remember">
+						Remember me</label>
+				</div>
+				<button type="submit" class="btn btn-default" th:text="#{submit}"></button>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

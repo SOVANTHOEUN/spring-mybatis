@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<title layout:title-pattern="$CONTENT_TITLE_-$DECORATOR_TITLE">Test</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<style th:replace="share/_css"></style>
+</head>
+<body>
+
+	<div class="wrapper">
+		<div class="page-wrapper">
+			<div class="container-fluid">
+				<div th:replace="share/_nav_bar_header"></div>
+				<div th:replace="share/_left-side-bar"></div>
+				<div th:replace="share/_right-side-bar"></div>
+				<div th:replace="share/_subheader"></div>
+				<div layout:fragment="content"></div>
+			</div>
+		</div>
+	</div>
+	<div th:replace="share/_script"></div>
+</body>
+</html>
